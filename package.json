@@ -1,0 +1,18 @@
+{
+  "name": "intro-api0612",
+  "version": "1.0.0",
+  "description": "introduction about API",
+  "license": "ISC",
+  "author": "Abdi",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
