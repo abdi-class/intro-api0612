@@ -58,6 +58,10 @@ app.patch("/student/:id", (req: Request, res: Response) => {
 // DELETE : untuk menghapus data
 app.delete("/student/:id", (req: Request, res: Response) => {
   console.log("DELETE", req.params);
+  const findIdx = dbStudent.findIndex((val: any) => {
+    return val.id === parseInt(req.params.id);
+  });
+  dbStudent.splice(findIdx, 1);
   res.send("Delete data");
 });
 
