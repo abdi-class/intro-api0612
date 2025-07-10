@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from "express";
 import fs from "fs";
+import studentRoute from "./routers/student.router";
 
 const PORT: number = 5000;
 
@@ -13,11 +14,8 @@ app.get("/", (req: Request, res: Response) => {
   res.send("<h1>Express API</h1>");
 });
 
-// GET : untuk membaca data
-app.get("/student", (req: Request, res: Response) => {
-  const data = JSON.parse(fs.readFileSync("./db.json").toString());
-  res.send(data);
-});
+// config route
+app.use("/student", studentRoute);
 
 // POST : untuk menambah data
 app.post("/student", (req: Request, res: Response) => {
